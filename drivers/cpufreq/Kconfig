@@ -40,7 +40,7 @@ config CPU_FREQ_STAT_DETAILS
 	  This will show detail CPU frequency translation table in sysfs file
 	  system.
 
-	  If in doubt, say Y.
+	  If in doubt, say N.
 
 choice
 	prompt "Default CPUFreq governor"
@@ -127,12 +127,6 @@ config CPU_FREQ_DEFAULT_GOV_SMARTASSV2
 	select CPU_FREQ_GOV_SMARTASSV2
 	help
 		Use the CPUFreq governor 'smartassV2' as default.
-
-config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX2
-  	bool "interactiveX"
-  	select CPU_FREQ_GOV_INTERACTIVEX2
-  	help
-    	  Use the CPUFreq governor 'interactiveX2' as default.
 
 endchoice
 
@@ -235,14 +229,6 @@ config SMARTASSV2_SAMPLE_RATE_JIFFIES
 	help
 	  Sampling rate, I highly recommend to leave it at 2.
 	  
-config CPU_FREQ_GOV_INTERACTIVEX2
-	tristate "'interactiveX2' cpufreq governor"
-	depends on CPU_FREQ
-	help
-	   'interactiveX2' - interactive governor with early suspend support added.
-	    This governor uses hotplug to shutdown and start up cpu1 when suspended.
-	    If in doubt, say N
-
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
 	help
