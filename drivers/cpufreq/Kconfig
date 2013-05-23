@@ -122,9 +122,9 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
 	help
 	  Use the CPUFreq governor 'intellidemand' as default.
 	  
-config CPU_FREQ_DEFAULT_GOV_SMARTASSV2
+config CPU_FREQ_DEFAULT_GOV_SMARTASS2
 	bool "smartass2"
-	select CPU_FREQ_GOV_SMARTASSV2
+	select CPU_FREQ_GOV_SMARTASS2
 	help
 		Use the CPUFreq governor 'smartassV2' as default.
 
